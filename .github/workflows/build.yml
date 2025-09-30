@@ -1,16 +1,9 @@
 name: Build
 
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'data.json'
-      - '.github/tpl.md'
-
+on: push
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: puzl-ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: install jinja2
